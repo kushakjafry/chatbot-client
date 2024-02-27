@@ -13,7 +13,7 @@ class ChatbotQuestionsProxy {
 
   generateSpeechMarksData(marks: any) {
     marks = "[" + marks + "]";
-    marks = marks.replace(new RegExp("}\n{", "g"), "},{");
+    marks = marks.replace(new RegExp("}\\r?\\n{", "g"), "},{");
     let marksJson = JSON.parse(marks);
     let frames = [];
     let words = [];
